@@ -1,0 +1,11 @@
+.pokecard-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: medium;
+}

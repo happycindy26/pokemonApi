@@ -1,0 +1,20 @@
+.pokecard {
+    border: 2px solid gainsboro;
+    text-align: center;
+    padding: 10px;
+    flex: 1 0 21%;
+    margin: 10px;
+}
+.image {
+    background-color: #eceff1;
+    
+}
+img {
+    height: 120px;
+    margin: 30px 10px;
+    transition: all ease 500ms;
+}
+
+img:hover {
+    transform: scale(1.25);
+}
