@@ -12,13 +12,16 @@ class Pokemon extends Component {
         super(props);
         this.state = { deck: [], shown: []};
         this.getCards = this.getCards.bind(this);
+      
     }
-
+    
     async componentDidMount() {
         const deckRes = await axios.get(API_URL);
         const pokemonAll = deckRes.data.results;
         const pokemonUrl = pokemonAll.map(pokemon => pokemon.url);
         this.setState({deck: pokemonUrl})
+        console.log(this.state.deck)
+        //this.seenPokemon = new Set(this.state.shown.map(c => c.id));
     }
 
     async getCards() {
@@ -26,8 +29,11 @@ class Pokemon extends Component {
         while (pokemon.length < this.props.numPokemonUrl) {
             const randomPokemonUrl = this.state.deck[Math.floor( Math.random() * this.state.deck.length )];
             const CardRes = await axios.get( randomPokemonUrl );
+            //if (this.seenPokemon.has(CardRes.data))
             pokemon.push(CardRes.data);
+            
         }
+        console.log(pokemon);
         pokemon.map(card => {
             const imgAPI = "https://pokeres.bastionbot.org/images/pokemon/";
             const pokemonTypes = card.types.map(type => type.type.name).join(' & ');
@@ -55,8 +61,8 @@ class Pokemon extends Component {
         ))
         return (
             <div>
-                <h1>Pokemon Cards</h1>
-                <button onClick={this.getCards}>Get Cards</button>
+                <h1 className="title">Pokemon Cards</h1>
+                <button className="button" onClick={this.getCards}>Get Cards</button>
                 <div className="pokecard-container">
                     {cards}
                 </div>

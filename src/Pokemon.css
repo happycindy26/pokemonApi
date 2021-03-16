@@ -1,11 +1,30 @@
 .pokecard-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(15rem, 1fr));
+    justify-items: center;
+    
 }
-
-button {
+.title {
+    font-family: Carter One;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, rgb(209, 218, 248), rgb(1, 66, 245));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.button {
+    font-size: 1.2rem;
+    font-weight: 700;
     margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
     cursor: pointer;
-    font-size: medium;
+    border-radius: 6rem;
+    border: none;
+    outline: none;
+}
+.button:hover {
+    background-color: rgb(81, 123, 238);
+    color: #fff;
+    border: none;
+    outline: none;
 }
