@@ -1,5 +1,5 @@
 live demo: https://pokemon--api.herokuapp.com
-1) My first react app 
+1) React.js app
 2) Fetch pokemon data from pokemon API with axios
 3) Deloyed on heroku
 
