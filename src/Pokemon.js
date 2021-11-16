@@ -20,7 +20,7 @@ class Pokemon extends Component {
         const pokemonAll = deckRes.data.results;
         const pokemonUrl = pokemonAll.map(pokemon => pokemon.url);
         this.setState({deck: pokemonUrl})
-        console.log(this.state.deck)
+        //console.log(this.state.deck)
         //this.seenPokemon = new Set(this.state.shown.map(c => c.id));
     }
 
@@ -33,7 +33,7 @@ class Pokemon extends Component {
             pokemon.push(CardRes.data);
             
         }
-        console.log(pokemon);
+        //console.log(pokemon);
         pokemon.map(card => {
             //const imgAPI = "https://pokeres.bastionbot.org/images/pokemon/";
             const pokemonTypes = card.types.map(type => type.type.name).join(' & ');
