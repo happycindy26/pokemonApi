@@ -35,14 +35,15 @@ class Pokemon extends Component {
         }
         console.log(pokemon);
         pokemon.map(card => {
-            const imgAPI = "https://pokeres.bastionbot.org/images/pokemon/";
+            //const imgAPI = "https://pokeres.bastionbot.org/images/pokemon/";
             const pokemonTypes = card.types.map(type => type.type.name).join(' & ');
             this.setState( st => ({
                 shown: [
                     ...st.shown, {
                         id: card.id,
                         name: card.name,
-                        image: `${imgAPI}/${card.id}.png`,
+                        image: card.sprites.back_default,
+                        // image: `${imgAPI}/${card.id}.png`,
                         base_experience: card.base_experience,
                         type: pokemonTypes
                     }
