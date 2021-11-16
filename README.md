@@ -1,3 +1,8 @@
+live demo: https://pokemon--api.herokuapp.com
+1) React.js app
+2) Fetch pokemon data from pokemon API with axios
+3) Deloyed on heroku
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
